@@ -17,11 +17,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Flet
-        run: pip install flet
+      - name: Install Latest Flet
+        run: pip install flet --upgrade
 
       - name: Build APK
-        run: flet build apk --module-name main --name "Ecal-v24" --non-interactive
+        run: flet build apk --module-name main
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
